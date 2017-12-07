@@ -1,0 +1,67 @@
+<!Doctype html>
+<html>
+<head>
+<title> knoucutjs form </title>
+</head>
+<body>
+
+<!--<h1>witam</h1>-->
+
+<!--<p>First name: <strong data-bind="text: firstName"> test imię </strong></p>-->
+<!--<p>Last name: <strong data-bind="text: lastName"> test nazwisko </strong></p>-->
+<!--<p>First name: <input data-bind="value: firstName" /></p>-->
+<!--<p>Last name: <input data-bind="value: lastName" /> </p>-->
+<!--<p>Full name: <strong data-bind="text: fullName"></strong></p>-->
+<!--<br>-->
+<!--<button data-bind="click: capitalizeLastName">Go caps</button>-->
+<!-- example 2 -->
+<!--<h2>Your seat reservations</h2>-->
+
+<!--<table>-->
+    <!--<thead><tr>-->
+        <!--<th>Passenger name</th><th>Meal</th><th>Surcharge</th><th></th>-->
+    <!--</tr></thead>-->
+    <!--<tbody data-bind="foreach: seats">-->
+    <!--<tr>-->
+        <!--<td><input data-bind="value: name" /></td>-->
+        <!--<td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>-->
+
+        <!--<td data-bind="text: meal().price"></td>-->
+        <!--<td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>-->
+
+    <!--</tr>-->
+    <!--</tbody>-->
+<!--</table>-->
+<!--<h3 data-bind="visible: totalSurcharge() > 0">-->
+    <!--Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>-->
+<!--</h3>-->
+
+<!--<button data-bind="click: addSeat, enable: seats().length < 10">Reserve another seat</button>-->
+<!--&lt;!&ndash; add seats  while seats < 10 &ndash;&gt;-->
+<!--<h2>Your seat reservations (<span data-bind="text: seats().length"></span>)</h2>-->
+
+<!--example 3 -->
+<ul data-bind="foreach: folders">
+    <li data-bind="text: $data,
+               css: { selected: $data == $root.chosenFolderId() },
+               click: $root.goToFolder"></li>
+</ul>
+
+<table class="mails" data-bind="with: chosenFolderData">
+    <thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>
+    <tbody data-bind="foreach: mails">
+    <tr>
+        <td data-bind="text: from"></td>
+        <td data-bind="text: to"></td>
+        <td data-bind="text: subject"></td>
+        <td data-bind="text: date"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"> </script>
+<script type="text/javascript" src="app.js"> </script>
+</body>
+</html>
