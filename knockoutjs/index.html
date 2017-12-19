@@ -1,7 +1,11 @@
 <!Doctype html>
 <html>
 <head>
-<title> knoucutjs form </title>
+<title> knoucutjs/jquery form </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"> </script>
+
 </head>
 <body>
 
@@ -40,28 +44,72 @@
 <!--&lt;!&ndash; add seats  while seats < 10 &ndash;&gt;-->
 <!--<h2>Your seat reservations (<span data-bind="text: seats().length"></span>)</h2>-->
 
-<!--example 3 -->
-<ul data-bind="foreach: folders">
-    <li data-bind="text: $data,
-               css: { selected: $data == $root.chosenFolderId() },
-               click: $root.goToFolder"></li>
+<!--&lt;!&ndash;example 3 &ndash;&gt;-->
+<!--<ul data-bind="foreach: folders">-->
+    <!--<li data-bind="text: $data,-->
+               <!--css: { selected: $data == $root.chosenFolderId() },-->
+               <!--click: $root.goToFolder"></li>-->
+<!--</ul>-->
+
+<!--<table class="mails" data-bind="with: chosenFolderData">-->
+    <!--<thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>-->
+    <!--<tbody data-bind="foreach: mails">-->
+    <!--<tr>-->
+        <!--<td data-bind="text: from"></td>-->
+        <!--<td data-bind="text: to"></td>-->
+        <!--<td data-bind="text: subject"></td>-->
+        <!--<td data-bind="text: date"></td>-->
+    <!--</tr>-->
+    <!--</tbody>-->
+<!--</table>-->
+<ul class="ul-test">
+    <li class="li-test">
+        jeden
+        <input class="checkkBoxId" type="checkbox">
+    </li>
+    <li class="li-test">
+        dwa
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+    <li class="li-test">
+        trzy
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+</ul>
+<ul class="ul-test">
+    <li class="li-test opacity-test">
+        jeden jeden
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+    <li class="li-test opacity-test">
+        dwa
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+    <li class="li-test opacity-test ">
+        trzy trzy
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+</ul>
+<ul class="ul-test">
+    <li class="li-test opacity-test">
+        jeden jeden
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+    <li class="li-test opacity-test">
+        dwa
+        <input type="checkbox" class="checkkBoxId">
+    </li>
+    <li class="li-test opacity-test">
+        trzy trzy
+        <input type="checkbox" class="checkkBoxId">
+    </li>
 </ul>
 
-<table class="mails" data-bind="with: chosenFolderData">
-    <thead><tr><th>From</th><th>To</th><th>Subject</th><th>Date</th></tr></thead>
-    <tbody data-bind="foreach: mails">
-    <tr>
-        <td data-bind="text: from"></td>
-        <td data-bind="text: to"></td>
-        <td data-bind="text: subject"></td>
-        <td data-bind="text: date"></td>
-    </tr>
-    </tbody>
-</table>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"> </script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
 <script type="text/javascript" src="app.js"> </script>
+
 </body>
 </html>

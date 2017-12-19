@@ -55,23 +55,77 @@
 // }
 //
 // ko.applyBindings(new ReservationsViewModel());
+//
+// function WebmailViewModel() {
+//     // Data
+//     var self = this;
+//
+//     self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
+//     self.chosenFolderId = ko.observable();
+//     self.chosenFolderData = ko.observable();
+//        self.chosenMailData = ko.observable();
+//
+//     // // Behaviours
+//     self.goToFolder = function(folder) {
+//         // self.goToFolder('Inbox');
+//         self.chosenFolderId(folder);
+//         $.get('/mail', { folder: folder }, self.chosenFolderData);
+//     };
+//
+// };
 
-function WebmailViewModel() {
-    // Data
-    var self = this;
+// ko.applyBindings(new WebmailViewModel());
+// // document.addEventListener('DOMContentLoaded',function (e) {
+//    console.log(e);
+var  liTest = $('.ul-test .li-test');
+$(liTest).css('opacity','.5');
+liTest.each(function( index ) {
 
-    self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
-    self.chosenFolderId = ko.observable();
-    self.chosenFolderData = ko.observable();
-       self.chosenMailData = ko.observable();
 
-    // // Behaviours
-    self.goToFolder = function(folder) {
-        // self.goToFolder('Inbox');
-        self.chosenFolderId(folder);
-        $.get('/mail', { folder: folder }, self.chosenFolderData);
-    };
 
-};
+    $(this).hover(function () {
 
-ko.applyBindings(new WebmailViewModel());
+        $(this).toggleClass('hover');
+        // $(this).fadeToggle( "slow", "linear" );
+        $(this).css('opacity','.9');
+    });
+
+
+
+});
+
+
+var checkbox = $('.checkkBoxId');
+$(checkbox).attr('checked', false);
+
+$(checkbox).click(function() {
+
+    $(this).parent().toggleClass('active');
+
+});
+// checkbox.each(function (index) {
+//
+//     if($().is(':checked')){
+//         $(this).addClass('hover');
+//
+//     }else {
+//         $(this).removeClass('hover');
+//     };
+//
+//     if($(this).attr('checked')) {
+//         console.log('asdaas')
+//         // something when checked
+//     } else {
+//         // something else when not
+//     }
+//
+//
+// });
+
+console.log(liTest);
+
+
+//
+// });
+
+
